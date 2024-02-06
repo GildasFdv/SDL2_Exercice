@@ -14,12 +14,8 @@ int main(int argc, char** argv)
     Init(&state);
 
     while(loop(&state));
-
-    SDL_DestroyRenderer(state.renderer);
-    SDL_DestroyWindow(state.window);
-    SDL_DestroyRenderer(state.editRenderer);
-    SDL_DestroyWindow(state.editWindow);
-	SDL_Quit();
+    
+    Destroy(&state);
     return 0;
 }
 
